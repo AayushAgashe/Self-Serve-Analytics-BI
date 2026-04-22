@@ -1,0 +1,82 @@
+I am building a production-grade, scalable full-stack application and need your help to properly design, refactor, and complete it using industry best practices.
+
+Current State:
+Backend is partially implemented using Python scripts and Streamlit.
+The current implementation is not modular or production-ready.
+I will provide a Functional Requirements Document (FRD) for reference.
+
+Core Requirements:
+Backend must be built using FastAPI.
+Frontend must be built using Angular.
+Database: SQLite for now (but design must support future migration to PostgreSQL or other databases).
+The system must follow a clean, scalable, and maintainable architecture.
+
+Critical Architecture Constraints:
+Strict Separation of Concerns:
+Backend and frontend must be completely separate applications.
+No mixing of frontend and backend logic.
+Backend must expose APIs only (no UI logic like Streamlit).
+Frontend must consume APIs via HTTP (no direct database or backend logic leakage).
+
+Project Structure (Enterprise-Level):
+Backend should follow modular architecture: (routers, services, repositories, models, schemas, core/config)
+Frontend (Angular) should follow feature-based modular structure.
+Use environment-based configurations (no hardcoded values).
+Ensure codebase is scalable and easy to extend.
+
+Backend Responsibilities (FastAPI):
+Refactor existing logic into a clean FastAPI architecture.
+Use dependency injection properly.
+Implement validation using Pydantic.
+Use SQLAlchemy ORM for database interaction.
+Include proper error handling, logging, and middleware.
+Avoid monolithic or tightly coupled code.
+
+Database Design:
+Design a normalized schema based on the FRD.
+Use SQLite initially but keep it DB-agnostic.
+Suggest migrations strategy (Alembic).
+Include relationships, constraints, and indexing considerations.
+
+
+
+API Design:
+Build RESTful APIs with proper conventions.
+Clearly define request/response schemas.
+Ensure APIs are frontend-friendly.
+Avoid hardcoded responses.
+
+Frontend (Angular):
+Define a scalable Angular folder structure.
+Implement service layer for API communication.
+Use environment configs for API URLs.
+Keep UI logic separate from business logic.
+Avoid hardcoding data.
+
+
+
+AI / Logic Constraints:
+Do NOT generate hardcoded, rule-based, or brittle logic.
+Prefer configurable, extensible, and data-driven approaches.
+Code should feel like written by an experienced engineer, not a quick prototype.
+
+Code Quality:
+Follow clean code and SOLID principles.
+Use meaningful naming conventions.
+Avoid unnecessary complexity, but also avoid shortcuts.
+Write modular, reusable components.
+
+Workflow: Step 1: Analyze the FRD
+Identify missing requirements, edge cases, inconsistencies Step 2: Propose system architecture Step 3: Define backend + frontend folder structure Step 4: Design database schema Step 5: Define API contracts Step 6: Implement backend modules step-by-step Step 7: Define frontend integration strategy
+
+Interaction Rules:
+Do NOT jump directly into coding.
+First analyze and critique the FRD.
+Ask clarifying questions if anything is unclear.
+Then proceed step-by-step.
+
+End Goal: Transform this project into a cleanly structured, production-ready application with:
+Decoupled FastAPI backend
+Independent Angular frontend
+Scalable database design
+No hardcoding, no shortcuts, no prototype-style code
